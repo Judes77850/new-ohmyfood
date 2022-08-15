@@ -1,0 +1,91 @@
+@mixin explore{
+    color: $color-7;
+    background: $color-5;
+    padding: 20px 35px 20px 35px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-family: "roboto";
+    font-size: 25px;
+    box-shadow: lightgrey 3px 3px 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    opacity: 1;
+    z-index: 5;
+    transition-duration: 700ms;
+    &:hover{
+        box-shadow: grey 3px 3px 15px;
+        opacity: 0;
+        transition-duration: 700ms;
+        transition-delay: 200ms;
+    }
+    &_modif{
+    color: $color-7;
+    background: $color-6;
+    padding: 20px 35px 20px 35px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-family: "roboto";
+    font-size: 25px;
+    box-shadow: lightgrey 3px 3px 15px;
+    margin-top: -99px;
+    margin-bottom: 30px;
+    opacity: 1;
+    z-index: 4;
+    }
+}
+
+@mixin command{
+    color: $color-7;
+    background: $color-5;
+    padding: 20px 35px 20px 35px;
+    margin: 40px 0px 40px 0px;
+    border-radius: 40px;
+    width: 220px;
+    border: none;
+    cursor: pointer;
+    font-family: "roboto";
+    font-size: 20px;
+    box-shadow: lightgrey 3px 3px 15px;
+    z-index: 5;
+    opacity: 1;
+    transition-duration: 1000ms;
+    animation: command 3600ms;
+    animation-delay: 0ms;
+    &:hover{
+        box-shadow: grey 3px 3px 15px;
+        opacity: 0;
+        transition-duration: 1000ms;
+    }
+    &_modif{
+        color: $color-7;
+        background: $color-6;
+        padding: 20px 35px 20px 35px;
+        margin: 40px 0px 40px 0px;
+        border-radius: 40px;
+        width: 220px;
+        border: none;
+        cursor: pointer;
+        font-family: "roboto";
+        font-size: 20px;
+        box-shadow: lightgrey 3px 3px 15px;
+        margin-top: -103px;
+        opacity: 1;
+        transition-duration: 1000ms;
+        z-index: 4;
+        animation: command 3600ms;
+        animation-delay: 0ms;
+    }
+    @keyframes command {
+        0%{
+        opacity: 0; 
+        }
+        60%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}

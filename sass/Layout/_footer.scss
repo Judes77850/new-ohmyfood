@@ -1,0 +1,81 @@
+@mixin footer{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding-left: 5%;
+    margin-bottom: -20px;
+    margin-top: -30px;
+    p{
+        padding-top: 30px;
+    font-size: 30px;
+    font-family: "shrikhand";
+    }
+    ul{
+    list-style: none;
+    padding-left: 0px;
+    padding-bottom: 30px;
+    }
+    a:visited{
+        color: white;
+    }
+    li{
+        font-family: "roboto";
+        margin-bottom: 10px;
+        transform: scale(1.0);
+        transform-origin: left;
+        transition-duration: 300ms;
+        font-size: 19px;
+        &:hover{
+            color: $color-2;
+            transform: scale(1.1);
+            transition-duration: 300ms;
+        }
+    }
+        a{
+            color: $color-2;
+            text-decoration: none; 
+            width: 100%;
+        }
+}
+
+@mixin footertab{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding-left: 0%;
+    margin-bottom: -20px;
+    margin-top: -30px;
+    p{
+        padding-top: 30px;
+        font-size: 30px;
+        font-family: "shrikhand";
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 0px;
+        padding-bottom: 30px;
+    }
+    a:visited{
+        color: white;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    li{ 
+        margin-top: 0px;
+        margin: 20px;
+        font-family: "roboto";
+        font-size: 18px;
+        transform: scale(1);
+        transition: transform 100ms ease-in-out;
+        transform-origin: top;
+        width: 25%;
+        text-align: center;
+        &:hover { 
+            transform: scale(1.10);
+            }
+    }
+}

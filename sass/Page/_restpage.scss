@@ -1,0 +1,321 @@
+@mixin restpage{
+    z-index: 7;
+    opacity: 1;
+    animation: restapage 1200ms;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+
+    @keyframes restapage {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
+    header{
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 30px;
+        position: relative;
+        z-index: 9;
+        .logo{
+            margin: auto;
+        }
+        a{
+            color: black;
+            float: left;
+            margin-top: 50px;
+            margin-left: 25px;
+            margin-right: -35px;
+            font-size: 28px;
+            transition: transform 400ms ease-in-out;
+            :hover{
+                transform: rotate(1turn);
+                transition: transform 400ms ease-in-out;
+            }
+            :active{
+                animation: a 1000ms;
+            }
+
+            @keyframes a {
+                0%{
+                    transform: rotate(0turn);
+                }
+                100%{
+                    transform: rotate(-4turn);
+                }
+            }
+        }
+    }
+    .topimage{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    main{
+        position: relative;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px 0px 20px;
+        margin-top: -80px;
+        background-color: $color-1;
+        border-radius: 50px 50px 0px 0px;
+    }
+    h1{
+        font-family: "shrikhand";
+        font-size: 35px;
+        width: 90%;
+        flex-wrap: nowrap;
+    }
+
+
+    .topsection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 30px;
+        width: 100%;
+        .heart-std {
+            display: flex;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+            margin: -30px 30px 10px 50px;
+            color: black;
+            background-color: $color-1;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 4;
+            opacity: 1;
+            transition-duration: 800ms;
+            &:hover{
+                opacity: 0;
+                transition-duration: 400ms;
+            }
+        }
+        .heart-color {
+            display: flex;
+            font-size: 30px;
+            color: transparent;
+            width: 30px;
+            height: 30px;
+            margin: 20px 0px 0px 50px;
+            justify-content: flex-end;
+            align-items: center;
+            background: $color-5;
+            background-clip: text;
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+
+    section{
+        width: 100%;
+        h2{
+            font-family: "robotothin";
+            font-size: 19px;
+            margin-top: 40px;
+            opacity: 0;
+        }
+        .liseret{
+            width: 50px;
+            height: 3px;
+            background-color: $color-8;
+            margin: -11px 0px 20px 0px;
+            opacity: 0;
+        }
+        .card{
+            width: 100%;
+            max-width: 650px;
+            display: flex;
+            opacity: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: $color-7;
+            border-radius: 20px;
+            box-shadow: lightgrey 3px 3px 15px;
+            padding: 0px 0px 0px 10px;
+            margin: auto;
+            margin-bottom: 15px;
+            cursor: pointer;
+            overflow: hidden;
+    
+            .firstpart{
+                display: inline-block;
+                width: 100%;
+                max-width: 100%;
+                overflow: hidden;
+                
+                .name{
+                    font-family: "roboto";
+                    font-size: 20px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .accname{
+                    font-family: "robotothin";
+                    font-size: 18px;
+                    margin-top: -10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-right: 25px;
+                }
+            }
+            .secondpart{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                max-width: 20%;
+                height: 30px;
+                font-family: "roboto";
+                margin-top: 50px;
+                margin-right: 20px;
+
+            }
+            .validbox{
+                display: flex;
+                opacity: 1;
+                width: 90px;
+                height: auto;
+                color: $color-7;
+                background-color: $color-8;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                padding: 0px 0px 0px 0px;
+                margin-right: -91px;
+                border-radius: 0px 15px 15px 0px;
+                transition: 600ms;
+                transition-delay: 0ms;
+            }
+            .valid{
+                margin: auto;
+                transition: transform 600ms linear;
+                transition-delay: -50ms;
+                
+            }
+            &:hover{
+                .validbox{
+                    height: auto;
+                    width: 90px;
+                    margin-right: -1px;
+                    margin-left: 10px;
+                    opacity: 1;
+                    transition: 600ms;
+                }
+                .valid{
+                    transform: rotate(2turn) scale(1);
+                    transition: transform 600ms;
+                    margin: auto
+                }
+                
+            }
+        }
+        .card1{
+            animation: card 1000ms;
+            animation-delay: 600ms;
+            animation-fill-mode: forwards;
+        }
+        .card2{
+            animation: card 1000ms;
+            animation-delay: 700ms;
+            animation-fill-mode: forwards;
+        }
+        .card3{
+            animation: card 1000ms;
+            animation-delay: 800ms;
+            animation-fill-mode: forwards;
+        }
+        .card4{
+            animation: card 1000ms;
+            animation-delay: 900ms;
+            animation-fill-mode: forwards;
+        }
+        .card5{
+            animation: card 1000ms;
+            animation-delay: 1000ms;
+            animation-fill-mode: forwards;
+        }
+        .card6{
+            animation: card 1000ms;
+            animation-delay: 1100ms;
+            animation-fill-mode: forwards;
+        }
+        .card7{
+            animation: card 1000ms;
+            animation-delay: 1200ms;
+            animation-fill-mode: forwards;
+        }
+        .card8{
+            animation: card 1000ms;
+            animation-delay: 1300ms;
+            animation-fill-mode: forwards;
+        }
+        .card9{
+            animation: card 1000ms;
+            animation-delay: 1400ms;
+            animation-fill-mode: forwards;
+        }
+        .card10{
+            animation: card 1000ms;
+            animation-delay: 1500ms;
+            animation-fill-mode: forwards;
+        }
+        .card11{
+            animation: card 1000ms;
+            animation-delay: 1600ms;
+            animation-fill-mode: forwards;
+        }
+        .card12{
+            animation: card 1000ms;
+            animation-delay: 1700ms;
+            animation-fill-mode: forwards;
+        }
+        .card13{
+            animation: card 1000ms;
+            animation-delay: 1800ms;
+            animation-fill-mode: forwards;
+        }
+        .card14{
+            animation: card 1000ms;
+            animation-delay: 1900ms;
+            animation-fill-mode: forwards;
+        }
+        .card15{
+            animation: card 1000ms;
+            animation-delay: 2000ms;
+            animation-fill-mode: forwards;
+        }
+        .card16{
+            animation: card 1000ms;
+            animation-delay: 2100ms;
+            animation-fill-mode: forwards;
+        }
+        .card17{
+            animation: card 1000ms;
+            animation-delay: 2200ms;
+            animation-fill-mode: forwards;
+        }
+        @keyframes card {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+    .command{
+        @include command;
+    }
+}
