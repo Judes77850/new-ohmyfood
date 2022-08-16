@@ -36,6 +36,7 @@
     & i{
         color: grey;
         font-size: 25px;
+        margin-right: 20px;
     }
     & p{
         margin: auto;
@@ -45,7 +46,7 @@
 @mixin foncttab {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-family: "roboto";
     font-size: 17px;
@@ -79,8 +80,7 @@
         color: $color-7;
         background: $color-5;
         border-radius: 25px;
-        margin-left: -20px;
-        margin-right: 30px;
+        margin-left: -10px;
         margin-top: 0px;
     }
     i{
